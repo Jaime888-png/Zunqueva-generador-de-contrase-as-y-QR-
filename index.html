@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zunqueva - Free Online Tools</title>
+
+  <meta
+    name="description"
+    content="Simple, fast and free online tools. Generate secure passwords and QR codes instantly. No registration required."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">Zunqueva</a>
+
+      <a href="#tools" class="header-link">Tools</a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+
+        <div class="hero-badge">
+          Free · No account · No hassle
+        </div>
+
+        <h1>
+          Useful tools,<br>
+          without the hassle.
+        </h1>
+
+        <p>
+          Simple online tools that do exactly what you need.
+          Fast, free and easy to use.
+        </p>
+
+        <a href="#tools" class="primary-button">
+          Explore tools
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- TOOLS -->
+    <section class="tools-section" id="tools">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">TOOLS</span>
+          <h2>Simple tools for everyday use.</h2>
+          <p>
+            No registration. No unnecessary steps.
+            Just choose a tool and use it.
+          </p>
+        </div>
+
+
+        <div class="tools-grid">
+
+          <!-- PASSWORD GENERATOR -->
+          <article class="tool-card">
+
+            <div class="tool-icon">🔐</div>
+
+            <h3>Password Generator</h3>
+
+            <p class="tool-description">
+              Create a strong random password instantly.
+            </p>
+
+
+            <div class="password-output">
+              <input
+                type="text"
+                id="passwordOutput"
+                placeholder="Your password will appear here"
+                readonly
+              >
+
+              <button
+                id="copyPassword"
+                class="copy-button"
+                type="button"
+              >
+                Copy
+              </button>
+            </div>
+
+
+            <div class="settings">
+
+              <div class="setting-row">
+                <label for="passwordLength">
+                  Length
+                </label>
+
+                <span id="lengthValue">16</span>
+              </div>
+
+              <input
+                type="range"
+                id="passwordLength"
+                min="4"
+                max="64"
+                value="16"
+              >
+
+
+              <label class="checkbox-row">
+                <input
+                  type="checkbox"
+                  id="includeNumbers"
+                  checked
+                >
+
+                <span>Include numbers</span>
+              </label>
+
+
+              <label class="checkbox-row">
+                <input
+                  type="checkbox"
+                  id="includeSymbols"
+                  checked
+                >
+
+                <span>Include symbols</span>
+              </label>
+
+            </div>
+
+
+            <button
+              id="generatePassword"
+              class="primary-button full-width"
+              type="button"
+            >
+              Generate password
+            </button>
+
+
+            <p class="privacy-note">
+              Generated directly in your browser.
+            </p>
+
+          </article>
+
+
+          <!-- QR GENERATOR -->
+          <article class="tool-card">
+
+            <div class="tool-icon">▣</div>
+
+            <h3>QR Code Generator</h3>
+
+            <p class="tool-description">
+              Turn text or a URL into a QR code instantly.
+            </p>
+
+
+            <textarea
+              id="qrInput"
+              placeholder="Enter text or a URL..."
+              rows="5"
+            ></textarea>
+
+
+            <button
+              id="generateQR"
+              class="primary-button full-width"
+              type="button"
+            >
+              Generate QR code
+            </button>
+
+
+            <div
+              id="qrResult"
+              class="qr-result"
+            ></div>
+
+
+            <button
+              id="downloadQR"
+              class="secondary-button full-width hidden"
+              type="button"
+            >
+              Download QR code
+            </button>
+
+          </article>
+
+        </div>
+
+
+        <!-- COMING SOON -->
+        <div class="coming-soon">
+
+          <span class="coming-soon-label">
+            MORE TOOLS
+          </span>
+
+          <h3>More useful tools coming soon.</h3>
+
+          <p>
+            Zunqueva will grow based on the tools people actually need.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRINCIPLES -->
+    <section class="principles-section">
+
+      <div class="container">
+
+        <div class="principles-grid">
+
+          <div class="principle">
+            <div class="principle-number">01</div>
+
+            <h3>Free</h3>
+
+            <p>
+              Useful tools without unnecessary costs.
+            </p>
+          </div>
+
+
+          <div class="principle">
+            <div class="principle-number">02</div>
+
+            <h3>No account</h3>
+
+            <p>
+              Open the tool and start using it immediately.
+            </p>
+          </div>
+
+
+          <div class="principle">
+            <div class="principle-number">03</div>
+
+            <h3>Fast</h3>
+
+            <p>
+              No complicated processes or unnecessary steps.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Zunqueva
+      </span>
+
+      <span>
+        Simple tools. No hassle.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- QR CODE LIBRARY -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+  ></script>
+
+  <!-- YOUR JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

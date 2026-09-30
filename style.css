@@ -1,0 +1,643 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: #fafafa;
+  color: #171717;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  background: rgba(250, 250, 250, 0.92);
+  border-bottom: 1px solid #e8e8e8;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #111;
+  text-decoration: none;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.header-link {
+  color: #555;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-link:hover {
+  color: #111;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 110px 0 100px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  padding: 7px 13px;
+  margin-bottom: 25px;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 999px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(46px, 7vw, 78px);
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+.hero p {
+  max-width: 590px;
+  margin: 0 auto 34px;
+
+  color: #666;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button {
+  border: none;
+  border-radius: 10px;
+
+  padding: 13px 20px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+.primary-button {
+  display: inline-block;
+
+  background: #171717;
+  color: white;
+
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.secondary-button {
+  background: #eeeeee;
+  color: #171717;
+}
+
+.secondary-button:hover {
+  background: #e4e4e4;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+/* =========================
+   TOOLS SECTION
+========================= */
+
+.tools-section {
+  padding: 90px 0;
+  background: #fff;
+
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 50px;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #777;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+
+  letter-spacing: -1.8px;
+
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: #666;
+}
+
+
+/* =========================
+   TOOL GRID
+========================= */
+
+.tools-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================
+   TOOL CARD
+========================= */
+
+.tool-card {
+  padding: 30px;
+
+  background: #fafafa;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.tool-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 12px;
+
+  background: #eeeeee;
+
+  font-size: 21px;
+}
+
+.tool-card h3 {
+  margin-bottom: 8px;
+
+  font-size: 24px;
+  letter-spacing: -0.7px;
+}
+
+.tool-description {
+  margin-bottom: 25px;
+
+  color: #666;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-output {
+  display: flex;
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.password-output input {
+  min-width: 0;
+  flex: 1;
+
+  padding: 12px 13px;
+
+  border: 1px solid #ddd;
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: #222;
+
+  font-size: 14px;
+}
+
+.copy-button {
+  padding: 0 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 9px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.copy-button:hover {
+  background: #f0f0f0;
+}
+
+.settings {
+  margin-bottom: 22px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#lengthValue {
+  color: #666;
+}
+
+input[type="range"] {
+  width: 100%;
+
+  margin-bottom: 18px;
+
+  accent-color: #171717;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: #555;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #171717;
+}
+
+.privacy-note {
+  margin-top: 14px;
+
+  color: #888;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   QR CODE
+========================= */
+
+textarea {
+  width: 100%;
+
+  resize: vertical;
+
+  padding: 13px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: #222;
+
+  outline: none;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+textarea:focus,
+.password-output input:focus {
+  border-color: #999;
+}
+
+.qr-result {
+  min-height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 24px 0;
+}
+
+.qr-result img,
+.qr-result canvas {
+  max-width: 100%;
+
+  padding: 10px;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+.coming-soon {
+  margin-top: 60px;
+
+  padding: 40px;
+
+  border: 1px dashed #d8d8d8;
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.coming-soon-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #888;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.coming-soon h3 {
+  margin-bottom: 8px;
+
+  font-size: 22px;
+}
+
+.coming-soon p {
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   PRINCIPLES
+========================= */
+
+.principles-section {
+  padding: 90px 0;
+}
+
+.principles-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.principle {
+  padding-right: 20px;
+}
+
+.principle-number {
+  margin-bottom: 14px;
+
+  color: #aaa;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.principle h3 {
+  margin-bottom: 7px;
+
+  font-size: 20px;
+}
+
+.principle p {
+  color: #666;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  padding: 28px 0;
+
+  border-top: 1px solid #e5e5e5;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    padding: 80px 0 75px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .principle {
+    padding-right: 0;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .header-inner {
+    height: 64px;
+  }
+
+  .hero {
+    padding: 65px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .tools-section {
+    padding: 65px 0;
+  }
+
+  .tool-card {
+    padding: 22px;
+  }
+
+  .password-output {
+    flex-direction: column;
+  }
+
+  .copy-button {
+    height: 42px;
+  }
+
+  .coming-soon {
+    padding: 30px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
